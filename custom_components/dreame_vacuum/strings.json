@@ -48,7 +48,9 @@
           "color_scheme": "Map color scheme",
           "icon_set": "Map icon set",
           "notify": "Notification",
-          "map_objects": "Map objects"
+          "map_objects": "Map objects",
+          "low_resolution": "Low resolution map",
+          "square": "Square map"
         }
       },
       "reauth_confirm": {
@@ -65,6 +67,8 @@
           "icon_set": "Map icon set",
           "notify": "Notification",
           "map_objects": "Map objects",
+          "low_resolution": "Low resolution map",
+          "square": "Square map",
           "configuration_type": "Configuration type",
           "prefer_cloud": "Prefer cloud connection"
         }
@@ -141,6 +145,14 @@
           "low_frequency": "Low Frequency"
         }
       },
+      "mop_pad_swing": {
+        "state": {
+          "off": "Off",
+          "auto": "Auto",
+          "daily": "Daily",
+          "weekly": "Weekly"
+        }
+      },
       "floor_material": {
         "state": {
           "none": "None",
@@ -155,6 +167,11 @@
           "german": "German",
           "chinese": "Chinese"
         }
+      },
+      "order": {
+        "state": {
+          "not_set": "Not Set"
+        }
       }
     },
     "sensor": {
@@ -164,8 +181,8 @@
           "sweeping": "Sweeping",
           "charging": "Charging",
           "error": "Error",
-          "idle": "[%key:common::state::idle%]",
-          "paused": "[%key:common::state::paused%]",
+          "idle": "Idle",
+          "paused": "Paused",
           "returning": "Returning to dock",
           "mopping": "Mopping",
           "drying": "Drying",
@@ -197,8 +214,8 @@
       "status": {
         "state": {
           "unknown": "Unknown",
-          "idle": "[%key:common::state::idle%]",
-          "paused": "[%key:common::state::paused%]",
+          "idle": "Idle",
+          "paused": "Paused",
           "cleaning": "Cleaning",
           "returning": "Returning to dock",
           "spot_cleaning": "Spot cleaning",
@@ -255,7 +272,7 @@
           "returning_to_remove_mop": "Returning to remove mop"
         }
       },
-      "mop": {
+      "water_tank": {
         "state": {
           "unknown": "Unknown",
           "installed": "Installed",
@@ -264,7 +281,7 @@
           "in_station": "In station"
         }
       },
-      "water_tank": {
+      "mop_pad": {
         "state": {
           "unknown": "Unknown",
           "installed": "Installed",
@@ -283,91 +300,91 @@
       "auto_empty_status": {
         "state": {
           "unknown": "Unknown",
-          "idle": "[%key:common::state::idle%]",
+          "idle": "Idle",
           "active": "Active",
           "not_performed": "Not performed"
         }
       },
       "error": {
         "state": {
-          "unknown": "Unknown error code",
-          "no_error": "No error",
-          "drop": "Wheels are suspended",
-          "cliff": "Cliff sensor error",
-          "bumper": "Collision sensor is stuck",
-          "gesture": "Robot is tilted",
-          "bumper_repeat": "Collision sensor is stuck",
-          "drop_repeat": "Wheels are suspended",
-          "optical_flow": "Optical flow sensor error",
-          "no_box": "Dust bin not installed",
-          "no_tank_box": "Water tank not installed",
-          "water_box_empty": "Water tank is empty",
-          "box_full": "The filter not dry or blocked",
-          "brush": "The main brush wrapped",
-          "side_brush": "The side brush wrapped",
-          "fan": "The filter not dry or blocked",
-          "left_wheel_motor": "The robot is stuck, or its left wheel may be blocked by foreign objects",
-          "right_wheel_motor": "The robot is stuck, or its right wheel may be blocked by foreign objects",
-          "turn_suffocate": "The robot is stuck, or cannot turn",
-          "forward_suffocate": "The robot is stuck, or cannot go forward",
-          "charger_get": "Cannot find base",
-          "battery_low": "Low battery",
-          "charge_fault": "Charging error",
-          "battery_percentage": "Battery level error",
-          "heart": "Internal error",
-          "camera_occlusion": "Visual positioning sensor error",
-          "move": "Move sensor error",
-          "flow_shielding": "Optical sensor error",
-          "infrared_shielding": "Infrared shielding error",
-          "charge_no_electric": "The charging dock is not powered on",
-          "battery_fault": "Battery error",
-          "fan_speed_error": "Fan speed sensor error",
-          "left_wheell_speed": "Left wheel may be blocked by foreign objects",
-          "right_wheell_speed": "Right wheel may be blocked by foreign objects",
-          "bmi055_acce": "Accelerometer error",
-          "bmi055_gyro": "Gyro error",
-          "xv7001": "Gyro error",
-          "left_magnet": "Left magnet sensor error",
-          "right_magnet": "Right magnet sensor error",
-          "flow_error": "Flow sensor error",
-          "infrared_fault": "Infrared error",
-          "camera_fault": "Camera error",
-          "strong_magnet": "Strong magnetic field detected",
-          "water_pump": "Water pump error",
-          "rtc": "RTC error",
-          "auto_key_trig": "Internal error",
-          "p3v3": "Internal error",
-          "camera_idle": "Internal error",
-          "blocked": "Cleanup route is blocked, returning to the dock.",
-          "lds_error": "Laser distance sensor error",
-          "lds_bumper": "Laser distance sensor bumper error",
-          "filter_blocked": "The filter not dry or blocked",
-          "edge": "Edge sensor error",
-          "carpet": "Please start the robot in non-carpet area.",
-          "laser": "The 3D obstacle avoidance sensor is malfunctioning.",
-          "ultrasonic": "The ultrasonic sensor is malfunctioning.",
-          "no_go_zone": "No-Go zone or virtual wall detected.",
-          "route": "Cleanup route is blocked.",
-          "restricted": "Detected that the vacuum-mop is in a restricted area.",
-          "remove_mop": "Mopping completed. Please remove and clean the mop in time.",
-          "mop_removed": "The mop pad comes off during the cleaning task.",
-          "mop_pad_stop_rotate": "The mop pad has stopped rotating.",
-          "bin_full": "The dust collection bag is full, or the air duct is blocked.",
-          "bin_open": "The upper cover of auto-empty base is not closed, or the dust collection bag is not installed.",
-          "water_tank": "The clean water tank is not installed.",
-          "dirty_water_tank": "The dirty water tank is full or not installed.",
-          "water_tank_dry": "Low water level in the clean water tank, please fill with water timely.",
-          "dirty_water_tank_blocked": "Dirty water tank blocked.",
-          "dirty_water_tank_pump": "Dirty water tank pump error.",
-          "mop_pad": "The washboard is not installed properly.",
-          "wet_mop_pad": "The water level of the washboard is abnormal, please clean the washboard timely.",
-          "clean_mop_pad": "The cleaning task is complete, please clean the mop pad washboard.",
-          "clean_tank_level": "Check and fill the clean water tank.",
-          "station_disconnected": "Base station not powered on",
-          "dirty_tank_level": "The water level in the used water tank is too high.",
-          "washboard_level": "Water level in the washboard is too high.",
-          "no_mop_in_station": "Mop pad is not in the station.",
-          "dust_bag_full": "Dust bag is full or vents are blocked."
+          "unknown": "Неизвестная ошибка",
+          "no_error": "Ошибок нет",
+          "drop": "Колеса на весу",
+          "cliff": "Ошибка датчика падения",
+          "bumper": "Датчик столкновения застрял",
+          "gesture": "Робот наклонен",
+          "bumper_repeat": "Датчик столкновения заблокирован",
+          "drop_repeat": "Колеса на весу",
+          "optical_flow": "Ошибка оптического датчика",
+          "no_box": "Контейнер для мусора не установлен",
+          "no_tank_box": "Бак для воды не установлен",
+          "water_box_empty": "Бак для воды пуст",
+          "box_full": "Фильтр мокрый или засорился",
+          "brush": "Что-то намоталось на основную щетку",
+          "side_brush": "Что-то намоталось на боковую щетку",
+          "fan": "Фильтр мокрый или засорился",
+          "left_wheel_motor": "Робот застрял, его левое колесо может быть заблокировано",
+          "right_wheel_motor": "Робот застрял, его правое колесо может быть заблокировано",
+          "turn_suffocate": "Робот застрял и не может развернуться",
+          "forward_suffocate": "Робот застрял и не может продолжить движения вперед",
+          "charger_get": "Невозможно найти зарядную станцию",
+          "battery_low": "Низкий заряд",
+          "charge_fault": "Ошибка зарядки",
+          "battery_percentage": "Ошибка уровня заряда",
+          "heart": "Внутренняя ошибка",
+          "camera_occlusion": "Ошибка датчика позиционирования",
+          "move": "Ошибка датчика перемещения",
+          "flow_shielding": "Ошибка оптического датчика",
+          "infrared_shielding": "Ошибка ИК-датчика",
+          "charge_no_electric": "Зарядная док-станция (база) не подключена к источнику энергии",
+          "battery_fault": "Ошибка батереи",
+          "fan_speed": "Ошибка датчика мощности всасывания",
+          "left_wheell_speed": "Левое колесо может быть заблокировано посторонними предметами",
+          "right_wheell_speed": "Правое колесо может быть заблокировано посторонними предметами",
+          "bmi055_acce": "Ошибка акселерометра",
+          "bmi055_gyro": "Ошибка гироскопа",
+          "xv7001": "Ошибка гироскопа",
+          "left_magnet": "Ошибка датчика левого магнита",
+          "right_magnet": "Ошибка датчика правого магнита",
+          "flow_error": "Ошибка датчика расхода",
+          "infrared_fault": "Ошибка инфракрасного датчика",
+          "camera_fault": "Ошибка камеры",
+          "strong_magnet": "Обнаружено сильное магнитное поле",
+          "water_pump": "Ошибка помпы подачи воды",
+          "rtc": "Ошибка RTC",
+          "auto_key_trig": "Внутренняя ошибка",
+          "p3v3": "Внутренняя ошибка",
+          "camera_idle": "Внутренняя ошибка",
+          "blocked": "Маршрут уборки заблокирован, возврат на док-станцию",
+          "lds_error": "Ошибка лазерного датчика расстояния",
+          "lds_bumper": "Ошибка бампера лазерного датчика расстояния",
+          "filter_blocked": "Фильтр влажный или забит",
+          "edge": "Ошибка датчика падения",
+          "carpet": "Запустите робота в зоне, не покрытой коврами",
+          "laser": "Неисправен 3D-датчик обхода препятствий",
+          "ultrasonic": "Ультразвуковой датчик неисправен",
+          "no_go_zone": "Обнаружена запретная зона или виртуальная стена",
+          "route": "Маршрут уборки заблокирован",
+          "restricted": "Робот-пылесос находится в запретной зоне",
+          "remove_mop": "Уборка завершена. Снимите и промойте тряпку",
+          "mop_removed": "Тряпка отстегнулась во время уборки",
+          "mop_pad_stop_rotate": "Швабра не вращается",
+          "bin_full": "Контейнер для мусора полный или фильтр забит",
+          "bin_open": "Крышка контейнера для самоочистки на базе не закрыта или не установлен мешок",
+          "water_tank": "Бак для чистой воды не установлен",
+          "dirty_water_tank": "Бак для грязной воды не установлен",
+          "water_tank_dry": "Низкий уровень воды в баке для чистой воды, пора заполнить",
+          "dirty_water_tank_blocked": "Бак для грязной воды заблокирован",
+          "dirty_water_tank_pump": "Ошибка насоса бака для грязной воды",
+          "mop_pad": "Док-станция для чистки салфеток установлена не правильно",
+          "wet_mop_pad": "Уровень воды в отсеке для чистки салфеток (стиральная доска) ненормальный. Проверьте! И чистите этот отсек раз в неделю",
+          "clean_mop_pad": "Уборка завершена. Очистите отсек для чистки салфеток (стиральную доску)",
+          "clean_tank_level": "Проверьте бак чистой воды и заполните его как можно скорее",
+          "station_disconnected": "Док-станция (база) не включена",
+          "dirty_tank_level": "Уровень воды в баке для использованной воды слишком высок",
+          "washboard_level": "Уровень воды в стиральной доске слишком высок",
+          "no_mop_in_station": "Швабры нет на станции",
+          "dust_bag_full": "Пылесборник полон или забиты вентиляционные отверстия"
         }
       },
       "charging_status": {
@@ -391,7 +408,7 @@
       "self_wash_base_status": {
         "state": {
           "unknown": "Unknown",
-          "idle": "[%key:common::state::idle%]",
+          "idle": "Idle",
           "washing": "Washing",
           "drying": "Drying",
           "paused": "Paused",
@@ -414,7 +431,7 @@
       "stream_status": {
         "state": {
           "unknown": "Unknown",
-          "idle": "[%key:common::state::idle%]",
+          "idle": "Idle",
           "video": "Video",
           "audio": "Audio",
           "recording": "Recording"
@@ -423,7 +440,7 @@
       "drainage_status": {
         "state": {
           "unknown": "Unknown",
-          "idle": "[%key:common::state::idle%]",
+          "idle": "Idle",
           "draining": "Draining",
           "draining_successful": "Draining successful",
           "draining_failed": "Draining failed"
@@ -482,7 +499,15 @@
         },
         "repeats": {
           "name": "Repeats",
-          "description": "Number of cleaning passes for each zone between 1 and 3."
+          "description": "Number of cleaning passes for every selected zone."
+        },
+        "suction_level": {
+          "name": "Suction Level",
+          "description": "Fan speed for every selected zone."
+        },
+        "water_volume": {
+          "name": "Water Volume",
+          "description": "Water level for every selected zone."
         }
       }
     },
@@ -523,6 +548,30 @@
         "dnd_end": {
           "name": "Dnd End",
           "description": "End time of DnD feature."
+        }
+      }
+    },
+    "vacuum_goto": {
+      "name": "Go To",
+      "description": "Go to the coordinate of the map and stop.",
+      "fields": {
+        "x": {
+          "name": "X",
+          "description": "X Coordinate of the point."
+        },
+        "y": {
+          "name": "Y",
+          "description": "Y Coordinate of the point."
+        }
+      }
+    },
+    "vacuum_follow_path": {
+      "name": "Follow Path",
+      "description": "Follow list of coordinates on the map and return to base. (Only supported on vacuums with camera)",
+      "fields": {
+        "points": {
+          "name": "Points",
+          "description": "List of coordinates of the path."
         }
       }
     },
@@ -626,9 +675,33 @@
           "name": "Map ID",
           "description": "ID of the map to be restored."
         },
-        "map_url": {
-          "name": "Map URL",
-          "description": "File Url of the map."
+        "recovery_map_index": {
+          "name": "Recovery Map Index",
+          "description": "Index of the saved recovery map"
+        }
+      }
+    },
+    "vacuum_restore_map_from_file": {
+      "name": "Restore Map From File",
+      "description": "Restore a map from file.",
+      "fields": {
+        "map_id": {
+          "name": "Map ID",
+          "description": "ID of the map to be restored."
+        },
+        "file_url": {
+          "name": "File Url",
+          "description": "Url of the saved bz2.gz or tar.gz file"
+        }
+      }
+    },
+    "vacuum_backup_map": {
+      "name": "Backup Map",
+      "description": "Backup a map to cloud.",
+      "fields": {
+        "map_id": {
+          "name": "Map ID",
+          "description": "ID of the map to be restored."
         }
       }
     },
@@ -680,7 +753,7 @@
     },
     "vacuum_set_cleaning_sequence": {
       "name": "Set Cleaning Sequence",
-      "description": "Set room cleaning sequence.",
+      "description": "Set room cleaning sequence. (Only on supported devices)",
       "fields": {
         "cleaning_sequence": {
           "name": "Cleanin sequence",
@@ -690,7 +763,7 @@
     },
     "vacuum_set_custom_cleaning": {
       "name": "Set Custom Cleaning",
-      "description": "Set custom cleaning parameters.",
+      "description": "Set custom cleaning parameters. (Only on supported devices)",
       "fields": {
         "segment_id": {
           "name": "Segment ID",
@@ -703,6 +776,10 @@
         "water_volume": {
           "name": "Water Volume",
           "description": "Water volume for each room."
+        },
+        "cleaning_mode": {
+          "name": "Cleaning Mode",
+          "description": "Cleaning for each room (only supported on vacuums with mop pad lifting feature)."
         },
         "repeats": {
           "name": "Repeats",
@@ -735,6 +812,90 @@
         "consumable": {
           "name": "Consumable",
           "description": "Consumable type."
+        }
+      }
+    },
+    "vacuum_rename_shortcut": {
+      "name": "Rename Shortcut",
+      "description": "Rename a shortcut. (Only on supported devices)",
+      "fields": {
+        "shortcut_id": {
+          "name": "Shortcut ID",
+          "description": "ID of the shortcut."
+        },
+        "shortcut_name": {
+          "name": "Shortcut Name",
+          "description": "New name of the shortcut."
+        }
+      }
+    },
+    "vacuum_set_carpet_area": {
+      "name": "Set Carpet Area",
+      "description": "Define carpets and ignored carpets. (Only on supported devices)",
+      "fields": {
+        "carpets": {
+          "name": "Carpets",
+          "description": "Carpet areas."
+        },
+        "ignored_carpets": {
+          "name": "Ignored Carpets",
+          "description": "Ignored carpet areas for deleting the automatically detected carpets."
+        }
+      }
+    },
+    "vacuum_set_pathway": {
+      "name": "Set Pathway",
+      "description": "Define pathways.",
+      "fields": {
+        "pathways": {
+          "name": "Pathways",
+          "description": "Pathway line coordinates."
+        }
+      }
+    },
+    "vacuum_set_predefined_points": {
+      "name": "Set Predefined Points",
+      "description": "Define predefined coordinates on current map. (Only supported on vacuums with camera)",
+      "fields": {
+        "points": {
+          "name": "Points",
+          "description": "List of coordinates to be saved."
+        }
+      }
+    },
+    "vacuum_set_obstacle_ignore": {
+      "name": "Set Obstacle Ignore",
+      "description": "Set ignore status of an obstacle. (Only supported on vacuums with AI Obstacle detection feature)",
+      "fields": {
+        "x": {
+          "name": "X",
+          "description": "X Coordinate of the obstacle."
+        },
+        "y": {
+          "name": "Y",
+          "description": "Y Coordinate of the obstacle."
+        },
+        "obstacle_type": {
+          "name": "Obstacle Type",
+          "description": "Type of the obstacle that will be ignored."
+        },
+        "obstacle_ignored": {
+          "name": "Obstacle Ignored",
+          "description": "Obstacle is ignored or not."
+        }
+      }
+    },
+    "vacuum_set_router_position": {
+      "name": "Set router position",
+      "description": "Set router position on current map. (Only supported on vacuums with WiFi map feature)",
+      "fields": {
+        "x": {
+          "name": "X",
+          "description": "X Coordinate of the router."
+        },
+        "y": {
+          "name": "Y",
+          "description": "Y Coordinate of the router."
         }
       }
     },
